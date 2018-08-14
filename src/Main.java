@@ -33,5 +33,16 @@ public class Main {
         Team toronto = new Team("toronto");
         Team utah = new Team("utah");
         Team washington = new Team("washington");
+
+        if(philly.compareTo(boston) < 0){
+            philly.updateLosses();
+            boston.updateWins();
+        } else if(philly.compareTo(boston) > 0){
+            philly.updateWins();
+            boston.updateLosses();
+        } else {
+            philly.updateTies();
+            boston.updateTies();
+        }
     }
 }

@@ -13,6 +13,10 @@ public class Team {
     public Team(String filename) throws IOException {
         Scanner teamName = new Scanner(new File(filename + ".txt"));
 
+        wins = 0;
+        ties = 0;
+        losses = 0;
+
         //loop to get player names from a file
         int i = 0;
         while (teamName.hasNext() && i < playerName.length) {
@@ -61,17 +65,29 @@ public class Team {
 
     public int totalPoints() {
         int totalPoints = 0;
-    for(int i = 0; i<p.length; i++) {
-    totalPoints = totalPoints + p[i].getPoints();
-    }
+        for (int i = 0; i < p.length; i++) {
+            totalPoints = totalPoints + p[i].getPoints();
+        }
         return totalPoints;
     }
 
+    public void updateWins() {
+        wins++;
+    }
+
+    public void updateTies() {
+        ties++;
+    }
+
+    public void updateLosses() {
+        losses++;
+    }
+
     //use to decide which team won and which team lost
-    public int compareTo(Team other){
-        if(this.totalPoints() > other.totalPoints()){
+    public int compareTo(Team other) {
+        if (this.totalPoints() > other.totalPoints()) {
             return 1;
-        } else if(this.totalPoints() < other.totalPoints()){
+        } else if (this.totalPoints() < other.totalPoints()) {
             return -1;
         } else {
             return 0;
