@@ -54,15 +54,6 @@ public class Team {
         this.ties = ties;
     }
 
-    public Player highestScorer() {
-        for (int i = 0; i < (p.length - 1); i++) {
-            if (p[i].getAverage() > p[i + 1].getAverage()) {
-                p[i] = highestScorer;
-            }
-        }
-        return highestScorer;
-    }
-
     public int totalPoints() {
         int totalPoints = 0;
         for (int i = 0; i < p.length; i++) {
@@ -95,8 +86,7 @@ public class Team {
     }
 
     public String toString() {
-        return "The win/loss for this team was " + wins + " and " + losses + " with " + ties + " ties."
-                + "\nThe highest scorer for this team was " + highestScorer.getName();
+        return "The win/loss for this team was " + wins + " and " + losses + " with " + ties + " ties.";
     }
 }
 

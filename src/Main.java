@@ -3,13 +3,13 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Team atlanta = new Team("Atlanta");
-        Team boston = new Team("Boston");
-        Team brooklyn = new Team("Brooklyn");
-        Team charlotte = new Team("Charlotte");
-        Team chicago = new Team("Chicago");
-        Team cleveland = new Team("Cleveland");
-        Team dallas = new Team("Dallas");
+        Team atlanta = new Team("atlanta");
+        Team boston = new Team("boston");
+        Team brooklyn = new Team("brooklyn");
+        Team charlotte = new Team("charlotte");
+        Team chicago = new Team("chicago");
+        Team cleveland = new Team("cleveland");
+        Team dallas = new Team("dallas");
         Team denver = new Team("denver");
         Team detroit = new Team("detroit");
         Team goldenState = new Team("golden state");
@@ -44,5 +44,8 @@ public class Main {
             philly.updateTies();
             boston.updateTies();
         }
+
+        System.out.println("Philly: " + philly.toString());
+        System.out.println("Boston: " + boston.toString());
     }
 }
